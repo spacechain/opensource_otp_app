@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/lib/com.google.android.apps.authenticator2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <android.support.v7.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="@dimen/toolbar_height"/>
+  <ScrollView android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingTop="24dp">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+      <android.support.design.widget.TextInputLayout android:id="@+id/key_value_input_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:accessibilityLiveRegion="polite"
+          android:hint="RSA Public key"
+          android:labelFor="@+id/account_name"
+          android:minHeight="66dp">
+        <EditText android:id="@+id/key_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:fontFamily="sans-serif"
+            android:hint="RSA Public key"
+            android:singleLine="false"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="14sp"/>
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout android:id="@+id/message_value_input_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:accessibilityLiveRegion="polite"
+          android:hint="message"
+          android:labelFor="@+id/key_value"
+          android:minHeight="66dp"
+          app2:hintTextAppearance="@style/HintTextAppearance">
+        <EditText android:id="@+id/message_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:fontFamily="sans-serif"
+            android:hint="message"
+            android:singleLine="false"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="14sp"/>
+      </android.support.design.widget.TextInputLayout>
+
+      <LinearLayout android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button android:id="@+id/encrypt_btn"
+            style="@style/AddAccountButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:minHeight="48dp"
+            android:minWidth="96dp"
+            android:text="RSA Encrypt"/>
+      </LinearLayout>
+
+
+
+      <android.support.design.widget.TextInputLayout android:id="@+id/encrypt_result_output_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:accessibilityLiveRegion="polite"
+          android:hint="result"
+          android:labelFor="@+id/key_value"
+          android:minHeight="66dp"
+          app2:hintTextAppearance="@style/HintTextAppearance">
+        <EditText android:id="@+id/encrypt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:fontFamily="sans-serif"
+            android:hint="result"
+            android:singleLine="false"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="14sp"/>
+      </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+  </ScrollView>
+</RelativeLayout>
+
+
