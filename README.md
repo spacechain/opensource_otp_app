@@ -1,4 +1,4 @@
-# SPC Authenticator for Android (Open Source Version)
+# SpcAuthenticator for Android (Open Source Version)
 This project is based on the open source branch of the Google Authenticator
 Android application. There is noguarantee that the [open source repository]
 will receive any changes made upstream (or vice versa).
